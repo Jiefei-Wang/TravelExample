@@ -1,0 +1,11 @@
+Package: TravelExample
+Type: Package
+Title: An example of using the Travel package
+Version: 1.0
+Date: 2020-10-01
+Author: Jiefei Wang
+Maintainer: Jiefei Wang <szwjf08@gmail.com>
+Description: An example of using the Travel package
+License: GPL (>= 2)
+Imports: Rcpp (>= 1.0.5), Travel
+LinkingTo: Rcpp, Travel
