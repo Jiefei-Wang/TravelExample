@@ -10,6 +10,7 @@ struct Seq_info{
   }
 };
 
+// The data reading function
 size_t read_sequence(filesystem_file_data &file_data, void *buffer, size_t offset, size_t length)
 {
   Seq_info* info = (Seq_info*)file_data.private_data;
@@ -19,6 +20,8 @@ size_t read_sequence(filesystem_file_data &file_data, void *buffer, size_t offse
   }
   return length;
 }
+
+// The main ALTREP making function
 // [[Rcpp::export]]
 SEXP make_sequence_altrep(size_t n, size_t start, size_t step)
 {
