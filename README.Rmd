@@ -1,0 +1,39 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+Travel:::deploy_filesystem()
+Travel:::set_verbose(FALSE)
+```
+
+# TravelExample
+This is an example package to show how to build package based upon the Travel package. Please see code under `src/` to find the detailed information. You can run these test code to see the result
+
+```{r}
+devtools::load_all()
+
+## Create a super lengthy arithmetic sequence
+x <- make_sequence_altrep(n = 1024*1024*1024*64, start = 1, step = 2)
+length(x)
+x[1:10]
+
+## You can change the value of the vector without any problem
+x[1] <- 100
+x[1:10]
+
+## The private data of the vector will be GC
+## When the vector is not in used(see `Seq_info` in `main.cpp`)
+rm(x)
+gc()
+```
+
+
