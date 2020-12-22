@@ -32,7 +32,7 @@ SEXP make_sequence_altrep(size_t n, size_t start, size_t step)
   altrep_info.operations.get_region = read_sequence;
   altrep_info.private_data = info;
   altrep_info.protected_data = Rf_protect(Travel_shared_ptr<Seq_info>(info));
-  SEXP x = Rf_protect(Travel_make_altptr(altrep_info));
+  SEXP x = Rf_protect(Travel_make_altrep(altrep_info));
   Rf_unprotect(2);
   return x;
 }
