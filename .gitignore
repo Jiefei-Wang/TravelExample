@@ -40,6 +40,3 @@ vignettes/*.pdf
 
 debug_output
 TravelExample.Rproj
-src/*.dll
-src/*.o
-
